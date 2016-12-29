@@ -68,14 +68,14 @@ $vm.selectedIds // '1|3'
   * `multiple`: defaults to `undefined` ( Meaning default as a single select )
   * `width`: defaults to `100%`
   * `delimiter`: defaults to `,` ( Only for multiple select )
-  * `showValInText`: defaults to `undefined`. If set to `true`, the render result would be:
-    ```
+  * `showValInText`: defaults to `undefined`. If set to `true`, the render result would be:  
+```
     <select>
       <option>(1) Apple</option>
       <option>(2) Banana</option>
       ...
     </select>
-    ```
+```
 
 #### Build
 
