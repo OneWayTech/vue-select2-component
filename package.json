@@ -1,0 +1,41 @@
+{
+  "name": "vue-select2-component",
+  "description": "Select2 encapsulation for Vue 1.x",
+  "author": "Ken Berkeley <kenberkeley@foxmail.com>",
+  "version": "1.0.0",
+  "main": "src/Select2.vue",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production browserify src/Select2.vue -o dist/vue-select2-component.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenberkeley/vue-select2-component.git"
+  },
+  "keywords": [
+    "vue",
+    "select2"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "browserify": "^13.1.1",
+    "browserify-shim": "^3.8.12",
+    "cross-env": "^3.1.3",
+    "uglifyify": "^3.0.4",
+    "vueify": "^8.7.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "vueify",
+      "uglifyify"
+    ]
+  },
+  "browserify-shim": {
+    "vue": "global:Vue"
+  },
+  "license": "MIT"
+}
