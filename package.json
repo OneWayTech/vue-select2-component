@@ -2,10 +2,10 @@
   "name": "vue-select2-component",
   "description": "Select2 encapsulation for Vue 1.x",
   "author": "Ken Berkeley <kenberkeley@foxmail.com>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/Select2.vue",
   "scripts": {
-    "build": "cross-env NODE_ENV=production browserify src/Select2.vue -o dist/vue-select2-component.min.js"
+    "build": "cross-env NODE_ENV=production browserify -s VueSelect2 ./ -o dist/vue-select2-component.min.js"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Select2 Component Example</title>
+  <link href="//cdn.bootcss.com/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="app" class="container">
+    <label>My favorite fruits:</label>
+    <select2
+      :options="options"
+      :model.sync="selectedIdsInArr"
+      :models.sync="selectedIds"
+      :config="{ multiple: true, delimiter: '|', showValInText: true }">
+    </select2>
+    <hr>
+    <code>selectedIdsInArr: {{ selectedIdsInArr | json }}</code><br>
+    <code>selectedIds: {{ selectedIds }}</code>
+  </div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/select2/4.0.3/js/select2.min.js"></script>
+<script src="//cdn.bootcss.com/vue/1.0.28/vue.min.js"></script>
+<script src="./dist/vue-select2-component.min.js"></script>
+<script>
+Vue.config.devtools = true;
+
+window.app = new Vue({
+  el: '#app',
+  components: {
+    Select2: VueSelect2
+  },
+  data: function () {
+    return {
+      options: [
+        { value: 1, text: 'Apple' },
+        { value: 2, text: 'Banana' },
+        { value: 3, text: 'Orange' },
+        { value: 4, text: 'Grape' }
+      ],
+      selectedIdsInArr: [],
+      selectedIds: ''
+    };
+  }
+});
+
+// dynamically change values
+app.selectedIdsInArr = [1, 2];
+setTimeout(function () {
+  app.selectedIds = '3|4';
+}, 2000);
+</script>
+</body>
+</html>

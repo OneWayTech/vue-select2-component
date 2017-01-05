@@ -24,6 +24,7 @@ export default {
         width: '100%',
         allowClear: true,
         delimiter: ',', // for multi-select
+        placeholder: '',
         // default config shown as above
         ...this.config
       }

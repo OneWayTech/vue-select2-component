@@ -18,52 +18,16 @@
 > alternatively: `<script src="dist/vue-select2-component.min.js"></script>`  
 > which exposes **`VueSelect2`** as a global variable
 
-#### Usage
 
-This is a simple *Choose your favorite fruits* **multiple** select:
-
-```
-<template>
-  <div>
-    <label>My favorite fruits:</label>
-    <select2
-      :options="options"
-      :model.sync="selectedIdsInArr"
-      :models.sync="selectedIds"
-      :config="{ multiple: true, delimiter: '|' }">
-    </select2>
-  </div>
-</template>
-<script>
-import Select2 from 'vue-select2-component'
-
-export default {
-  components: { Select2 },
-  data: () => ({
-    options: [
-      { value: 1, text: 'Apple' },
-      { value: 2, text: 'Banana' },
-      { value: 3, text: 'Orange' },
-      { value: 4, text: 'Grape' }
-    ],
-    selectedIdsInArr: [],
-    selectedIds: ''
-  })
-}
-</script>
-```
-
-If `Apple` and `Orange` are selected:  
-```
-$vm.selectedIdsInArr // ['1', '3']
-$vm.selectedIds // '1|3'
-```
+#### Example
+See [here](https://kenberkeley.github.io/vue-select2-component/example.html), source in [`example.html`](./example.html)
+> I prefer inspecting it with [devtools](https://github.com/vuejs/vue-devtools)
 
 #### Configuration
 
 * `@prop {String/String[]} model (.sync!)`, defaults to `''`
 * `@prop {String} models (.sync!)`, defaults to `''`
-* `@prop {Object[]} options (required!)`, **must** format in `[{ value: {String/Number}, text: {String} }, ...]` pattern
+* `@prop {Object[]} options (required!)`, **must** in `[{ value: {String/Number}, text: {String} }]` pattern
 * `@prop {Object} config`, defaults to `{}`. Besides the [basic configuration](http://select2.github.io/options.html) of Select2, we have some extra settings:
   * `multiple`: defaults to `undefined` ( Meaning default as a single select )
   * `width`: defaults to `100%`
