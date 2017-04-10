@@ -20,7 +20,7 @@
 
 
 #### Example
-See [here](https://kenberkeley.github.io/vue-select2-component/example.html), source in [`example.html`](./example.html)
+See [here](https://onewaytech.github.io/vue-select2-component/example.html), source in [`example.html`](./example.html)
 > I prefer inspecting it with [devtools](https://github.com/vuejs/vue-devtools)
 
 #### Configuration
